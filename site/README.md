@@ -66,7 +66,7 @@ the dataset's folder, such as `assets/reference_bmode.png`), else `assets/hero.p
 the largest other PNG in `assets/`, else `main.*` or `hero.*` in another format, the images
 the card embeds and the rest of `assets/`, in that order. A card whose figure is not on the
 Hub can have one in `figures/<slug>.<ext>`, where the slug is the dataset id in lower case
-with runs of other characters replaced by `-` (`oslo/A_cardiac` is `oslo-a-cardiac`).
+with runs of other characters replaced by `-` (`ustb/A_cardiac` is `ustb-a-cardiac`).
 Thumbnails are square centre crops, cut by `cards.py`; for a figure of several panels, a
 `thumb_position` override (a CSS `object-position` such as `right` or `'10% 50%'`) picks the
 part shown.

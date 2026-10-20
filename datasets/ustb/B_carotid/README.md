@@ -1,6 +1,6 @@
 ---
-name: oslo-a-cardiac
-pretty_name: "USTB - In-vivo Cardiac (Verasonics P4-2)"
+name: ustb-b-carotid
+pretty_name: "USTB - In-vivo Carotid (Verasonics L7-4)"
 license: cc-by-4.0
 task_categories:
   - image-to-image
@@ -10,23 +10,24 @@ tags:
   - ultrasound
   - rf
   - open-h-rf
-  - cardiac
+  - vascular
+  - carotid
   - in-vivo
 size_categories:
   - n<1K
 ---
 
-# USTB - In-vivo Cardiac (Verasonics P4-2)
+# USTB - In-vivo Carotid (Verasonics L7-4)
 
-![Cine loop of a parasternal long-axis view](assets/hero.gif)
+![Focused B-mode of a carotid cross-section](assets/hero.png)
 
-*All 50 frames of [`Verasonics_P2-4_parasternal_long_subject_1.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/oslo/A_cardiac/Verasonics_P2-4_parasternal_long_subject_1.hdf5), reconstructed from the raw channel data with `reconstruct.py`.*
+*First frame of [`L7_FI_carotid_cross_1.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/ustb/B_carotid/L7_FI_carotid_cross_1.hdf5), reconstructed from the raw channel data with `reconstruct.py`.*
 
 ## Dataset Description
 
 Part of the **UltraSound ToolBox (USTB) Channel Capture Collection** (see the [collection card](../README.md)).
 
-In-vivo human cardiac channel-capture data acquired with a Verasonics Vantage 256 research scanner and a P4-2 phased-array probe. The collection contains parasternal long-axis and apical four-chamber views recorded with focused transmit beams (sector scan). The data is pre-beamformed RF channel data intended for research into generalized beamforming, adaptive imaging and cardiac reconstruction.
+In-vivo human carotid-artery channel-capture data acquired with a Verasonics Vantage 256 and an L7-4 linear-array probe, cross-sectional views, focused transmit imaging. Pre-beamformed RF channel data for vascular imaging and beamforming research.
 
 ## Dataset Contributor(s)
 
@@ -46,13 +47,13 @@ In-vivo human cardiac channel-capture data acquired with a Verasonics Vantage 25
 
 ## Intended Usage
 
-Generalized reconstruction and adaptive beamforming of cardiac ultrasound (RFP task 6.1). Suitable for B-mode reconstruction, aperture-domain processing, and deep-learning beamforming research on in-vivo cardiac data. (Open-H-RF RFP task 6.1 Generalized Reconstruction).
+Generalized reconstruction and adaptive beamforming of vascular ultrasound (RFP task 6.1). (Open-H-RF RFP task 6.1 Generalized Reconstruction).
 
 ## Dataset Characterization
 
 - **Data Collection Method:** clinical
 - **Labeling Method:** N/A (raw channel data; no annotations).
-- **Acquisition system:** probe(s) P4-2; element positions stored in `/probe/probe_geometry` (meters); center frequency, sampling frequency and sound speed stored per acquisition in `/scan` (see per-sample feature table).
+- **Acquisition system:** probe(s) L7-4; element positions stored in `/probe/probe_geometry` (meters); center frequency, sampling frequency and sound speed stored per acquisition in `/scan` (see per-sample feature table).
 
 ## Processing the Dataset
 
@@ -62,11 +63,11 @@ The example acquisition can be processed with the `pipeline.yaml` definition in 
 
 ```bash
 zea process \
-  --dataset hf://nvidia/Open-H-RF/oslo/A_cardiac/Verasonics_P2-4_parasternal_long_subject_1.hdf5 \
-  --config hf://nvidia/Open-H-RF/oslo/A_cardiac/pipeline.yaml
+  --dataset hf://nvidia/Open-H-RF/ustb/B_carotid/L7_FI_carotid_cross_1.hdf5 \
+  --config hf://nvidia/Open-H-RF/ustb/B_carotid/pipeline.yaml
 ```
 
-This `pipeline.yaml` holds the pipeline, display window and sector limits of that acquisition. Alternatively, all acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/oslo/reconstruct.py) at the root of this collection, as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF), together with the `pipeline*.yaml` definitions at the collection root and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub; `parameters.yaml` picks the pipeline, display window and dynamic range per acquisition (see the [collection card](../README.md#processing-the-dataset)).
+This `pipeline.yaml` holds the pipeline and display window of that acquisition. Alternatively, all acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/ustb/reconstruct.py) at the root of this collection, as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF), together with the `pipeline*.yaml` definitions at the collection root and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub; `parameters.yaml` picks the pipeline, display window and dynamic range per acquisition (see the [collection card](../README.md#processing-the-dataset)).
 
 ## Dataset Format
 
@@ -76,19 +77,20 @@ All acquisitions are stored in the **zea** HDF5 file format. Each `.hdf5` file i
 
 ## Dataset Quantification
 
-**Current Open-H-RF release:** 2 HDF5 files; 3.53 GB (3,533,897,728 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 3 HDF5 files; 219.48 MB (219,480,064 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
-- **Number of acquisitions:** 2
-- **Total channel-capture frames:** 75
+- **Number of acquisitions:** 3
+- **Total channel-capture frames:** 6
 - **Train / validation / test split:** not predefined (research dataset).
-- **Stored HDF5 size:** 3.53 GB (3,533,897,728 bytes).
+- **Stored HDF5 size:** 219.48 MB (219,480,064 bytes).
 
 Per-acquisition summary:
 
 | Acquisition | frames | transmits | samples | elements | n_ch | fs (MHz) | fc (MHz) | size (MB) |
 |---|---|---|---|---|---|---|---|---|
-| `Verasonics_P2-4_apical_four_chamber_subject_1` | 25 | 101 | 2176 | 64 | 1 | 11.9 | 2.98 | 1181.42 |
-| `Verasonics_P2-4_parasternal_long_subject_1` | 50 | 101 | 2176 | 64 | 1 | 11.9 | 2.98 | 2352.48 |
+| `L7_FI_carotid_cross_1` | 2 | 128 | 1920 | 128 | 1 | 20.8 | 5.21 | 82.84 |
+| `L7_FI_carotid_cross_2` | 2 | 128 | 1920 | 128 | 1 | 20.8 | 5.21 | 66.98 |
+| `L7_FI_carotid_cross_sub_2` | 2 | 128 | 1920 | 128 | 1 | 20.8 | 5.21 | 69.66 |
 
 Per-sample feature table:
 
@@ -109,7 +111,7 @@ Per-sample feature table:
 
 ## Subject Metadata
 
-Healthy adult volunteer(s). Anatomy: heart (parasternal long-axis, apical four-chamber). Scanner: Verasonics Vantage 256. Probe: P4-2 phased array (64 elements). Aggregate only; no per-subject identifiers are stored.
+Healthy adult volunteer(s). Anatomy: carotid artery (cross-section). Scanner: Verasonics Vantage 256. Probe: L7-4 linear array (128 elements). Aggregate only; no per-subject identifiers.
 
 ## Data Validation
 
@@ -119,11 +121,11 @@ The reference B-mode images committed alongside the data (`<name>_bmode.png`) ar
 
 ## Known Issues
 
-Focused sector acquisition: lateral resolution and field of view follow the transmit geometry. Phased-array data is best reconstructed on a polar (sector) grid. Frame counts vary per acquisition.
+Single/few-frame acquisitions; focused linear imaging.
 
 ## Ethical Considerations
 
-In-vivo data recorded from healthy adult volunteers at the University of Oslo with written informed consent for research use and data sharing, and approval from the Regional Committee for Medical and Health Research Ethics (REK), Norway. The files contain only backscattered RF channel data and acquisition parameters - no patient name, identifier, date of birth, acquisition date, facial image, or any other HHS Safe Harbor identifier is present (de-identified by construction).
+In-vivo data recorded from healthy adult volunteers at the University of Oslo with written informed consent for research use and data sharing, and approval from the Regional Committee for Medical and Health Research Ethics (REK), Norway. Files contain only RF channel data and acquisition parameters; no HHS Safe Harbor identifiers are present.
 
 ## Citation
 

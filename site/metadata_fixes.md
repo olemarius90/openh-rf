@@ -11,8 +11,8 @@ files.
 
 | File spelling | Counted as | Dataset(s) | Files | Evidence |
 |---|---|---|---|---|
-| `P4-1` | `P4-2v` | `oslo/E_simulation`, `oslo/C_verasonics_phantom` | 5 | See below. |
-| `P4-2` | `P4-2v` | `oslo/A_cardiac`, `oslo/C_verasonics_phantom` | 4 | 64 elements, 0.30 mm pitch. |
+| `P4-1` | `P4-2v` | `ustb/E_simulation`, `ustb/C_verasonics_phantom` | 5 | See below. |
+| `P4-2` | `P4-2v` | `ustb/A_cardiac`, `ustb/C_verasonics_phantom` | 4 | 64 elements, 0.30 mm pitch. |
 | `Verasonics P4-2v` | `P4-2v` | `vanderbilt` | 165 | Spelling only. |
 | `custom_p4_2_64_element` | `P4-2v` | `colorado-boulder` | 62 | 64 elements, 2.5 MHz, but 0.32 mm pitch against the others' 0.30 mm. |
 | `verasonics_c5_2v` | `C5-2v` | `unc-liver`, `tue-aaa` | 1921 | Spelling only. |

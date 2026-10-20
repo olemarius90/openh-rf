@@ -1,5 +1,5 @@
 ---
-name: oslo-d-alpinion-phantom
+name: ustb-d-alpinion-phantom
 pretty_name: "USTB - Phantom (Alpinion L3-8, PULSE Lab, Johns Hopkins University)"
 license: cc-by-4.0
 task_categories:
@@ -20,7 +20,7 @@ size_categories:
 
 ![Plane-wave compounded B-mode of hypoechoic cysts](assets/hero.png)
 
-*First frame of [`Alpinion_L3-8_CPWC_hypoechoic.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/oslo/D_alpinion_phantom/Alpinion_L3-8_CPWC_hypoechoic.hdf5), reconstructed from the raw channel data with `reconstruct.py`.*
+*First frame of [`Alpinion_L3-8_CPWC_hypoechoic.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/ustb/D_alpinion_phantom/Alpinion_L3-8_CPWC_hypoechoic.hdf5), reconstructed from the raw channel data with `reconstruct.py`.*
 
 ## Dataset Description
 
@@ -62,11 +62,11 @@ The example acquisition can be processed with the `pipeline.yaml` definition in 
 
 ```bash
 zea process \
-  --dataset hf://nvidia/Open-H-RF/oslo/D_alpinion_phantom/Alpinion_L3-8_CPWC_hypoechoic.hdf5 \
-  --config hf://nvidia/Open-H-RF/oslo/D_alpinion_phantom/pipeline.yaml
+  --dataset hf://nvidia/Open-H-RF/ustb/D_alpinion_phantom/Alpinion_L3-8_CPWC_hypoechoic.hdf5 \
+  --config hf://nvidia/Open-H-RF/ustb/D_alpinion_phantom/pipeline.yaml
 ```
 
-This `pipeline.yaml` holds the pipeline and display window of that acquisition. Alternatively, all acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/oslo/reconstruct.py) at the root of this collection, as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF), together with the `pipeline*.yaml` definitions at the collection root and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub; `parameters.yaml` picks the pipeline, display window and dynamic range per acquisition (see the [collection card](../README.md#processing-the-dataset)).
+This `pipeline.yaml` holds the pipeline and display window of that acquisition. Alternatively, all acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/ustb/reconstruct.py) at the root of this collection, as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF), together with the `pipeline*.yaml` definitions at the collection root and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub; `parameters.yaml` picks the pipeline, display window and dynamic range per acquisition (see the [collection card](../README.md#processing-the-dataset)).
 
 ## Dataset Format
 

@@ -1,7 +1,7 @@
 """The short name of each dataset, which the website shows and links it by.
 
 DATASETS maps a short name for every dataset card on the Hub (nvidia/Open-H-RF) to its
-hf:// path. Collections with sub-cards (oslo, resolvestroke) count once per sub-card;
+hf:// path. Collections with sub-cards (ustb, resolvestroke) count once per sub-card;
 their parent cards are not listed.
 """
 
@@ -16,12 +16,12 @@ DATASETS = {
     "kaist-snubh-barreleye": {"hf": f"{HF_ROOT}/kaist-snubh-barreleye"},
     "mosaic-nuevosono": {"hf": f"{HF_ROOT}/mosaic-nuevosono"},
     "nv-raw2insights-us": {"hf": f"{HF_ROOT}/nv-raw2insights-us"},
-    "oslo-cardiac": {"hf": f"{HF_ROOT}/oslo/A_cardiac"},
-    "oslo-carotid": {"hf": f"{HF_ROOT}/oslo/B_carotid"},
-    "oslo-verasonics-phantom": {"hf": f"{HF_ROOT}/oslo/C_verasonics_phantom"},
-    "oslo-alpinion-phantom": {"hf": f"{HF_ROOT}/oslo/D_alpinion_phantom"},
-    "oslo-simulation": {"hf": f"{HF_ROOT}/oslo/E_simulation"},
-    "oslo-motion": {"hf": f"{HF_ROOT}/oslo/F_motion"},
+    "ustb-cardiac": {"hf": f"{HF_ROOT}/ustb/A_cardiac"},
+    "ustb-carotid": {"hf": f"{HF_ROOT}/ustb/B_carotid"},
+    "ustb-verasonics-phantom": {"hf": f"{HF_ROOT}/ustb/C_verasonics_phantom"},
+    "ustb-alpinion-phantom": {"hf": f"{HF_ROOT}/ustb/D_alpinion_phantom"},
+    "ustb-simulation": {"hf": f"{HF_ROOT}/ustb/E_simulation"},
+    "ustb-motion": {"hf": f"{HF_ROOT}/ustb/F_motion"},
     "politorino": {"hf": f"{HF_ROOT}/politorino"},
     "resolvestroke-clinical": {"hf": f"{HF_ROOT}/resolvestroke/clinical"},
     "resolvestroke-flow-phantom": {"hf": f"{HF_ROOT}/resolvestroke/phantom_flow"},

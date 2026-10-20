@@ -51,7 +51,7 @@ PROBE_ALIASES = {
     "C5-2v": ["verasonics_c5_2v"],
     "L11-5v": ["verasonics_l11_5v", "Elevation Focused Linear Array Transducer"],
     "L11-4v": ["verasonics_l11_4v"],
-    # oslo's "P4-1" files have 64 elements (a P4-2); a P4-1 has 96.
+    # ustb's "P4-1" files have 64 elements (a P4-2); a P4-1 has 96.
     "P4-2v": ["Verasonics P4-2v", "P4-2", "custom_p4_2_64_element", "P4-1"],
     "Siemens ACUSON 10L4": ["Simulated 10L4 Transducer"],
 }
