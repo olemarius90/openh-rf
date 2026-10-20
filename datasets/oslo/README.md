@@ -33,7 +33,7 @@ Contributed by the **University of Oslo (UiO), Department of Informatics** (the 
 | `A_cardiac/` | In-vivo cardiac (Verasonics P4-2) | in-vivo human (research) | 6.1 Generalized Reconstruction | 2 |
 | `B_carotid/` | In-vivo carotid (Verasonics L7-4) | in-vivo human (research) | 6.1 Generalized Reconstruction | 3 |
 | `C_verasonics_phantom/` | Phantom (Verasonics L7-4 / P4) | phantom | 6.1 Generalized Reconstruction | 15 |
-| `D_alpinion_phantom/` | Phantom (Alpinion L3-8) | phantom | 6.1 Generalized Reconstruction | 4 |
+| `D_alpinion_phantom/` | Phantom (Alpinion L3-8, PULSE Lab, Johns Hopkins University) | phantom | 6.1 Generalized Reconstruction | 4 |
 | `E_simulation/` | Simulation (Field II) | simulation | 6.1 Generalized Reconstruction | 11 |
 | `F_motion/` | Motion estimation (SWE / ARFI, L7-4) | phantom | 6.4 Motion Estimation | 4 |
 
@@ -46,6 +46,8 @@ Total: **39 acquisitions**, 8.61 GB of stored HDF5 data.
 - Sven Peter Nasholm
 - Andreas Austeng
 - University of Oslo (UiO), Department of Informatics
+
+The Alpinion phantom data (`D_alpinion_phantom/`) was acquired by Muyinatu A. Lediju Bell and Ole Marius Hoel Rindal at the Photoacoustic & Ultrasonic Systems Engineering (PULSE) Lab, Johns Hopkins University; see that sub-dataset's card.
 
 ## Dataset Creation Date
 
@@ -92,4 +94,4 @@ Each acquisition ships with:
 
 ## Citation
 
-Please cite the UltraSound ToolBox (USTB) Channel Capture Collection, University of Oslo (Zenodo record 20261898). `PICMUS_numerical_calib_v2` (group E) was created **in collaboration with our group** as part of the PICMUS effort and is included on that basis; the other PICMUS datasets are excluded.
+Please cite the UltraSound ToolBox (USTB) Channel Capture Collection, University of Oslo (Zenodo record 20261898). `PICMUS_numerical_calib_v2` (group E) was created **in collaboration with our group** as part of the PICMUS effort and is included on that basis; the other PICMUS datasets are excluded. The Alpinion phantom data (`D_alpinion_phantom/`) was acquired at the PULSE Lab, Johns Hopkins University; please credit the PULSE Lab, Johns Hopkins University, and cite the UltraSound ToolBox paper (Rodriguez-Molares et al., IEEE IUS 2017, doi:[10.1109/ULTSYM.2017.8092389](https://doi.org/10.1109/ULTSYM.2017.8092389)) when using it.

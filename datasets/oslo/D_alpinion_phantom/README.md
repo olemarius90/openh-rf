@@ -1,6 +1,6 @@
 ---
 name: oslo-d-alpinion-phantom
-pretty_name: "USTB - Phantom (Alpinion L3-8)"
+pretty_name: "USTB - Phantom (Alpinion L3-8, PULSE Lab, Johns Hopkins University)"
 license: cc-by-4.0
 task_categories:
   - image-to-image
@@ -16,7 +16,7 @@ size_categories:
   - n<1K
 ---
 
-# USTB - Phantom (Alpinion L3-8)
+# USTB - Phantom (Alpinion L3-8, PULSE Lab, Johns Hopkins University)
 
 ![Plane-wave compounded B-mode of hypoechoic cysts](assets/hero.png)
 
@@ -26,19 +26,19 @@ size_categories:
 
 Part of the **UltraSound ToolBox (USTB) Channel Capture Collection** (see the [collection card](../README.md)).
 
-Phantom channel-capture data acquired on an Alpinion E-Cube 12R research scanner with an L3-8 linear-array probe. Hypoechoic and hyperechoic targets imaged with focused (FI) and coherent plane-wave compounding (CPWC) sequences.
+This data was acquired by Muyinatu A. Lediju Bell and Ole Marius Hoel Rindal at the Photoacoustic & Ultrasonic Systems Engineering (PULSE) Lab, Johns Hopkins University, on the PULSE Lab's Alpinion E-Cube 12R research scanner, and was shared with the USTB project. Please credit the PULSE Lab, Johns Hopkins University, when using this data (see [Citation](#citation)).
+
+Phantom channel-capture data of a CIRS General Purpose Ultrasound Phantom, acquired with an L3-8 linear-array probe. Hypoechoic and hyperechoic targets imaged with focused (FI) and coherent plane-wave compounding (CPWC) sequences.
 
 ## Dataset Contributor(s)
 
+- Muyinatu A. Lediju Bell <mledijubell@jhu.edu>
 - Ole Marius Hoel Rindal <omrindal@ifi.uio.no> (primary contact)
-- Yucel Karabiyik
-- Sven Peter Nasholm
-- Andreas Austeng
-- University of Oslo (UiO), Department of Informatics
+- Photoacoustic & Ultrasonic Systems Engineering (PULSE) Lab, Johns Hopkins University
 
 ## Dataset Creation Date
 
-06/23/2026 (packaging date; original acquisitions/simulations were produced between 2016 and 2023).
+06/23/2026 (packaging date; the original acquisitions were made at the PULSE Lab, Johns Hopkins University, in 2017).
 
 ## License / Terms of Use
 
@@ -111,7 +111,7 @@ Per-sample feature table:
 
 ## Subject Metadata
 
-No human or animal subjects. Targets: hypoechoic/hyperechoic phantom inclusions. Scanner: Alpinion E-Cube 12R. Probe: L3-8 linear array (128 elements).
+No human or animal subjects. Targets: hypoechoic/hyperechoic phantom inclusions. Scanner: Alpinion E-Cube 12R (PULSE Lab, Johns Hopkins University). Probe: L3-8 linear array (128 elements).
 
 ## Data Validation
 
@@ -129,4 +129,6 @@ Phantom acquisitions; no human or animal subjects. No ethical considerations bey
 
 ## Citation
 
-Please cite the UltraSound ToolBox (USTB) Channel Capture Collection, University of Oslo (Zenodo record 20261898).
+This data was acquired at the PULSE Lab, Johns Hopkins University, and shared through the UltraSound ToolBox (USTB). When using it, please cite:
+
+A. Rodriguez-Molares, O. M. H. Rindal, O. Bernard, A. Nair, M. A. Lediju Bell, H. Liebgott, A. Austeng and L. Løvstakken, "The UltraSound ToolBox," in *2017 IEEE International Ultrasonics Symposium (IUS)*, 2017, pp. 1–4. doi:[10.1109/ULTSYM.2017.8092389](https://doi.org/10.1109/ULTSYM.2017.8092389)
